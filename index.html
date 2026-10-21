@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Complete tasks, earn rewards, and track your progress with Task Earn 20.">
+  <title>Task and Earn</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: #ffffff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(92%, 1000px);
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #293449;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #54e6a5;
+    }
+
+    .nav-link {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 0 60px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1c3540;
+      color: #54e6a5;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 60px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #54e6a5;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 0 auto 30px;
+      color: #b8c2d3;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 10px;
+      background: #54e6a5;
+      color: #101827;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #35d992;
+      transform: translateY(-2px);
+    }
+
+    .secondary-button {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 1px solid #45536b;
+      border-radius: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      padding: 25px 0 60px;
+    }
+
+    .card {
+      background: #192437;
+      border: 1px solid #29374d;
+      padding: 25px;
+      border-radius: 16px;
+    }
+
+    .card .icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #b8c2d3;
+      font-size: 14px;
+    }
+
+    .steps {
+      padding: 10px 0 65px;
+      text-align: center;
+    }
+
+    .steps h2 {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .step-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      text-align: left;
+    }
+
+    .step {
+      padding: 20px;
+      background: #192437;
+      border-radius: 12px;
+    }
+
+    .step strong {
+      display: block;
+      color: #54e6a5;
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      background: #192437;
+      border: 1px solid #29374d;
+      border-radius: 18px;
+      padding: 38px 20px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .cta h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #b8c2d3;
+      margin-bottom: 22px;
+    }
+
+    footer {
+      border-top: 1px solid #293449;
+      padding: 24px 0;
+      color: #9aa8bc;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding-top: 55px;
+      }
+
+      .secondary-button {
+        margin: 12px 0 0;
+      }
+
+      .hero .button,
+      .hero .secondary-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">Task Earn 20</div>
+      <a
+        class="nav-link"
+        href="https://t.me/task_earn_20_bot"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Open Telegram Bot ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="badge">YOUR TASK REWARDS PLATFORM</div>
+
+      <h1>Complete Tasks.<br><span>Earn Rewards.</span></h1>
+
+      <p class="subtitle">
+        Join Task Earn 20 on Telegram, complete available tasks,
+        invite friends, and track your rewards in one place.
+      </p>
+
+      <a
+        class="button"
+        href="https://t.me/task_earn_20_bot"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Start Earning on Telegram →</a>
+
+      <a
+        class="secondary-button"
+        href="#how-it-works"
+      >How It Works</a>
+    </section>
+
+    <section class="features container">
+      <article class="card">
+        <div class="icon">🎯</div>
+        <h2>Complete Tasks</h2>
+        <p>Explore available tasks and earn rewards when completion is verified.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">👥</div>
+        <h2>Invite Friends</h2>
+        <p>Share your referral link and earn eligible referral rewards according to the program rules.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">💰</div>
+        <h2>Track Rewards</h2>
+        <p>Check your balance and review the available withdrawal options inside the bot.</p>
+      </article>
+    </section>
+
+    <section class="steps container" id="how-it-works">
+      <h2>How It Works</h2>
+
+      <div class="step-list">
+        <div class="step">
+          <strong>Step 1</strong>
+          Open the Telegram bot and press Start.
+        </div>
+
+        <div class="step">
+          <strong>Step 2</strong>
+          Browse the tasks available in the bot.
+        </div>
+
+        <div class="step">
+          <strong>Step 3</strong>
+          Complete tasks and wait for verification.
+        </div>
+
+        <div class="step">
+          <strong>Step 4</strong>
+          Review your balance and eligible withdrawal options.
+        </div>
+      </div>
+    </section>
+
+    <section class="cta container">
+      <h2>Ready to Get Started?</h2>
+      <p>Open Task Earn 20 on Telegram to explore available tasks.</p>
+
+      <a
+        class="button"
+        href="https://t.me/task_earn_20_bot"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Open @task_earn_20_bot</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Task Earn 20. All rights reserved.</p>
+      <p>Rewards are subject to task verification and the platform's terms.</p>
+    </div>
+  </footer>
+</body>
+</html>
