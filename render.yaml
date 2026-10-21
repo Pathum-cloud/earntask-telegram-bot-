@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: earntask-telegram-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: CHANNEL_1
+        sync: false
+      - key: CHANNEL_2
+        sync: false
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: USDT_BEP20_ADDRESS
+        sync: false
+      - key: ADS_APP_ID
+        value: "000530"
+      - key: TASK_PRICE_UNDER_2000
+        value: "4.00"
+      - key: TASK_PRICE_OVER_2000
+        value: "6.00"
+      - key: REFERRAL_REWARD
+        value: "0.02"
+      - key: AD_REWARD
+        value: "0.05"
+      - key: DAILY_AD_LIMIT
+        value: "30"
+      - key: JOIN_TASK_TOTAL
+        value: "0.01"
+      - key: USER_SHARE
+        value: "0.30"
