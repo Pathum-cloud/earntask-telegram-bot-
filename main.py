@@ -10,6 +10,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 import uvicorn
 
 load_dotenv()
@@ -303,6 +304,10 @@ async def fallback(m:Message):
  await m.answer("Please choose an option from the menu.",reply_markup=MENU)
 
 @app.get("/")
+async def home():
+ return FileResponse(os.path.join(os.path.dirname(__file__), "index.html"), media_type="text/html")
+
+@app.get("/health")
 async def health(): return {"ok":True,"service":"EarnTask bot"}
 
 async def run_bot():
